@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e3f2fd;
+}
+
+.wrapper {
+    width: 80vmin;
+    height: 90vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background: #293447;
+}
+
+.game-details {
+    color: #b8c6dc;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.play-board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(40, 1fr) / repeat(40, 1fr);
+    background:
+        linear-gradient(#4CAF50 20px, transparent 20px) 0 0,
+        linear-gradient(90deg, #4CAF50 20px, transparent 20px) 0 0,
+        linear-gradient(#45a049 20px, transparent 20px) 10px 10px,
+        linear-gradient(90deg, #45a049 20px, transparent 20px) 10px 10px;
+    background-size: 40px 40px;
+}
+
+.play-board .food {
+    background: #ff003d;
+}
+
+.play-board .head {
+    background: #60cbff;
+}
+
+.controls {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.control-button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.control-button:hover {
+    background-color: #45a049;
+}
+
+.up {
+    grid-area: up;
+}
+
+.down {
+    grid-area: down;
+}
+
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
+}
